@@ -4,6 +4,7 @@ body { margin: 0; min-height: 100vh; display: grid; place-items: center; }
 main { width: min(100%, 680px); padding: 24px 18px 40px; text-align: center; }
 h1 { margin: 0 0 8px; font-size: 2rem; }
 .hint, #status { color: #b8c0d0; line-height: 1.45; }
+.scanner { color: #84f0b2; font-size: .9rem; min-height: 1.3em; }
 video { width: 100%; max-height: 65vh; object-fit: cover; background: #000; border-radius: 16px; border: 1px solid #2b3447; }
 .actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin: 14px 0; }
 button { border: 0; border-radius: 10px; padding: 12px 15px; background: #5c7cfa; color: #fff; font: inherit; font-weight: 650; }
