@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#090b10">
+  <title>QOS Receiver</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Pinned QR scanner library. Camera access still requires HTTPS on iPhone. -->
+  <script defer src="https://cdn.jsdelivr.net/npm/@zxing/browser@0.1.5/umd/zxing-browser.min.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <main>
+    <h1>QOS Receiver</h1>
+    <p class="hint">Point the iPhone camera at the looping QOS GIF. Keep the QR code large and sharp.</p>
+    <video id="preview" muted playsinline></video>
+    <p id="status" role="status">Ready. Open this page over HTTPS, then start the camera.</p>
+    <div class="actions">
+      <button id="start">Start camera</button>
+      <button id="stop" disabled>Stop</button>
+      <button id="reset">Reset transfer</button>
+    </div>
+    <label>Downloaded file name <input id="filename" value="qos-recovered.bin" maxlength="160"></label>
+    <button id="download" disabled>Download reconstructed file</button>
+    <details><summary>Compatibility</summary><p>This receiver accepts only the custom QOS1 QR format made by <code>qos.jar</code>. It does not decode HCC2D.</p></details>
+  </main>
+</body>
+</html>
